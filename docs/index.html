@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+    crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="grid" id="main-doc">
+        <nav class="grid1" id="navbar">
+            <header id="nav-header">
+                Chess rules
+            </header>
+            <a class="nav-link" href="#What_is_chess">What is chess</a>
+            <a class="nav-link" href="#Is_it_difficult?">Is it difficult?</a>
+            <a class="nav-link" href="#Can_a_computer_play_it?">Can a computer play it?</a>
+            <a class="nav-link" href="#Pieces_and_moves">Pieces and moves</a>
+            <a class="nav-link" href="#How_to_win?">How to win?</a>
+            <a class="nav-link" href="#Draw_game">Draw game</a>
+            <a class="nav-link" href="#Strange_moves">Strange moves</a>
+            <a class="nav-link" href="#Time_control">Time control</a>
+        </nav>
+        <!-- <div id="extra"><br><br><br><br><br><br></div> -->
+        <div class="grid2" id="content"></div>
+        <section class="main-section" id="What_is_chess">
+            <header>
+                What is chess
+            </header>
+            
+            <p>
+                Chess is a recreational and competitive board game played between two players. 
+                It is sometimes called Western or international chess to distinguish it from related games such as xiangqi. 
+                The current form of the game emerged in Southern Europe during the second half of the 15th century 
+                after evolving from similar, much older games of Indian and Persian origin. 
+                Today, chess is one of the world's most popular games, played by millions of people worldwide at home, 
+                in clubs, online, by correspondence, and in tournaments.
+            </p>
+            <p>
+                Chess is an abstract strategy game and involves no hidden information. 
+                It is played on a square chessboard with 64 squares arranged in an eight-by-eight grid. 
+                At the start, each player (one controlling the white pieces, the other controlling the black pieces) 
+                controls sixteen pieces: one king, one queen, two rooks, two knights, two bishops, and eight pawns. 
+                The object of the game is to checkmate the opponent's king, 
+                whereby the king is under immediate attack (in "check") and there is no way to remove it from attack on the next move. 
+                There are also several ways a game can end in a draw.
+            </p>
+        </section>
+        <br>
+        <br>
+        <section class="main-section" id="Is_it_difficult?">
+            <header>
+                Is it difficult?
+            </header>
+            <p>Like most other games, it's easy to learn and difficult to master.</p>
+            <ul>
+                <li>beginner:</li>
+                <li>Amateur</li>
+                <li>Ranked</li>
+                <li>Master</li>
+            </ul>
+        </section>
+        <br>
+        <br>
+        <section class="main-section" id="Can_a_computer_play_it?">
+            <header>
+                Can a computer play it?
+            </header>
+            <p>
+                One of the goals of early computer scientists was to create a chess-playing machine. 
+                In 1997, Deep Blue became the first computer to beat the reigning World Champion in a match when it defeated Garry Kasparov. 
+                Today's chess engines are significantly stronger than even the best human players, 
+                and have deeply influenced the development of chess theory.
+            </p>
+        </section>
+        <br>
+        <br>
+        <section class="main-section" id="Pieces_and_moves">
+            <header>
+                Pieces and moves
+            </header>
+            <ul>
+                <li>Pawns</li>
+                <li>Bishops</li>
+                <li>Knights</li>
+                <li>Rooks</li>
+                <li>Queen</li>
+                <li>king</li>
+            </ul>
+            <br>
+            <div class="code">
+                <code>
+                    pawn() => {
+                        moves= [
+                            one_step_forward,
+                            two_step_forward(at_first_move),
+                            attacks_in_diagonal(one_step_forward)
+                        ]
+                    }
+                </code>
+                <br><br>
+                <code>
+                    bishop() => {
+                        moves = [
+                            any_steps_diagonal
+                        ]
+                    }
+                </code>
+                <br><br>
+                <code>
+                    knight() => {
+                        moves = [
+                            one_straight_step_then_one diagonal
+                        ]
+                        passing_above_other_pieces = true
+                    }
+                </code>
+                <br><br>
+                <code>
+                    rook() => {
+                        moves = [
+                            any_straight_steps
+                        ]
+                    }
+                </code>
+                <br><br>
+                <code>
+                    queen() => {
+                        moves = [
+                            bishop.moves,
+                            rook.moves
+                        ]
+                    }
+                </code>
+                <br><br>
+                <code>
+                    king() => {
+                        moves = [
+                            one_step_any_direction
+                        ]
+                    }
+                </code>
+            </div>
+        </section>
+        <br>
+        <br>
+        <section class="main-section" id="How_to_win?">
+            <header>
+                How to win?
+            </header>
+            <p>
+                there are several ways to win a match:
+            </p>
+            <ul>
+                <li>By doing checkmate</li>
+                <li>By withdraw</li>
+                <li>By lack of your adversary's time</li>
+            </ul>
+            <p>
+                When a king is under immediate attack by one or two of the opponent's pieces, it is said to be in check. 
+                A move in response to a check is legal only if it results in a position where the king is no longer in check. 
+                This can involve capturing the checking piece; 
+                interposing a piece between the checking piece and the king 
+                (which is possible only if the attacking piece is a queen, rook, or bishop and there is a square between it and the king); 
+                or moving the king to a square where it is not under attack. 
+                Castling is not a permissible response to a check.
+            </p>
+            <p>
+                The object of the game is to checkmate the opponent; 
+                this occurs when the opponent's king is in check, and there is no legal way to remove it from attack. 
+                It is never legal for a player to make a move that puts or leaves the player's own king in check. In casual games, 
+                it is common to announce "check" when putting the opponent's king in check, 
+                but this is not required by the rules of chess and is not usually done in tournaments.
+            </p>
+        </section>
+        <br>
+        <br>
+        <section class="main-section" id="Draw_game">
+            <header>
+                Draw game
+            </header>
+            <p>
+                If the player to move has no legal moves, but is not in check, the position is a stalemate, and the game is drawn.
+            </p>
+            <p>
+                If the game reaches a dead position, in which neither player is able to checkmate the other by any legal sequence of moves, the game is drawn. 
+                For example, if only the kings are on the board, 
+                all other pieces having been captured, checkmate is impossible and the game is drawn by this rule.
+            </p>
+            <p>
+                On the other hand, if both players still have a knight there is a highly unlikely yet theoretical possibility of checkmate, so this rule does not apply. 
+                This rule supersedes the previous rule which referred to "insufficient material", 
+                extending it to include other positions where checkmate is impossible such as blocked pawn endings where the pawns cannot be attacked.
+            </p>
+        </section>
+        <br>
+        <br>
+        <section class="main-section" id="Strange_moves">
+            <header>
+                Strange moves
+            </header>
+            <ul>
+                <li>Casting: consists of moving the king two squares along the first rank toward a rook on the player's first rank, 
+                    and then placing the rook on the last square that the king crossed.</li>
+                <li>En passant: When a pawn makes a two-step advance from its starting position 
+                    and there is an opponent's pawn on a square next to the destination square on an adjacent file, 
+                    then the opponent's pawn can capture it en passant ("in passing"), 
+                    moving to the square the pawn passed over.</li>
+                <li>Promotion: When a pawn advances to the eighth rank, as a part of the move it is promoted 
+                    and must be exchanged for the player's choice of queen, rook, bishop, or knight of the same color</li>
+            </ul>
+        </section>
+        <br>
+        <br>
+        <section class="main-section" id="Time_control">
+            <header>
+                Time control
+            </header>
+            <p>
+                In competition, chess games are played with a time control. If a player's time runs out before the game is completed, 
+                the game is automatically lost (provided the opponent has enough pieces left to deliver checkmate). 
+                The duration of a game ranges from long (or "classical") games, 
+                which can take up to seven hours (even longer if adjournments are permitted), to bullet chess (under 3 minutes per player for the entire game). 
+                Intermediate between these are rapid chess games, 
+                lasting between 20 minutes and two hours per game, a popular time control in amateur weekend tournaments.
+            </p>
+            <p>
+                Time is controlled using a chess clock that has two displays, one for each player's remaining time. 
+                Analog chess clocks have been largely replaced by digital clocks, which allow for time controls with increments.
+            </p>
+        </section>
+    </main>
+</body>
+</html>
